@@ -44,32 +44,14 @@
         <section id="music" class="music-section">
             <h2 class="section-title">TOP TRACKS <span class="accent-star">★</span></h2>
 
-            <div class="cassette-player">
-                <div class="cassette-window">
-                    <div class="tape-reel left"></div>
-                    <div class="tape-reel right"></div>
+            <div class="playlist-container">
+                <div class="playlist" id="playlist-container">
+                    <!-- Tracks will be loaded via JS -->
                 </div>
-                <div class="track-display" id="current-track">Select a track...</div>
 
-                <div class="playlist">
-                    <div class="track-item" data-src=""
-                        onclick="alert('Demo implementation: Audio file would play here')">
-                        <span class="track-number">01</span>
-                        <span class="track-name">Forever in Denim</span>
-                        <button class="play-btn">▶</button>
-                    </div>
-                    <div class="track-item" data-src=""
-                        onclick="alert('Demo implementation: Audio file would play here')">
-                        <span class="track-number">02</span>
-                        <span class="track-name">Neon Heartbreak</span>
-                        <button class="play-btn">▶</button>
-                    </div>
-                    <div class="track-item" data-src=""
-                        onclick="alert('Demo implementation: Audio file would play here')">
-                        <span class="track-number">03</span>
-                        <span class="track-name">Mall Food Court Date</span>
-                        <button class="play-btn">▶</button>
-                    </div>
+                <div id="lyrics-display" class="lyrics-container">
+                    <div class="lyrics-header">LYRICS</div>
+                    <div class="lyrics-text" id="lyrics-content"></div>
                 </div>
             </div>
         </section>
@@ -86,40 +68,55 @@
                 <div class="auction-details">
                     <h2 class="auction-title">THE SNOW JAMS RAFFLE</h2>
                     <p class="auction-description">Win the 1-of-1 "Endless Winter" Jacket. Sponsored by the
-                        <strong>Hardin Park PTA</strong>. All proceeds go directly to paying down school lunch debt.</p>
+                        <strong>Hardin Park PTA</strong>. All proceeds go directly to paying down school lunch debt.
+                    </p>
 
-                    <div class="bid-panel">
-                        <div class="current-bid">
-                            <span class="bid-label">YOUR ENTRIES</span>
-                            <span class="bid-amount glitch" id="user-points" data-text="0">0</span>
+                    <div class="dashboard-panel">
+                        <div class="dashboard-display">
+                            <span class="display-label">YOUR ENTRIES</span>
+                            <span class="display-value glitch" id="user-points" data-text="0">000</span>
                         </div>
-                        <div class="countdown-timer">
-                            <span class="timer-label">WINNER DRAWN IN</span>
-                            <div id="timer" class="timer-display">
-                                <span class="time-unit"><span id="days">00</span>d</span> :
-                                <span class="time-unit"><span id="hours">00</span>h</span> :
-                                <span class="time-unit"><span id="minutes">00</span>m</span> :
-                                <span class="time-unit"><span id="seconds">00</span>s</span>
+                        <div class="dashboard-display">
+                            <span class="display-label">DRAWING IN</span>
+                            <div id="timer" class="digital-clock">
+                                <span class="time-unit"><span id="days">00</span><small>D</small></span>:
+                                <span class="time-unit"><span id="hours">00</span><small>H</small></span>:
+                                <span class="time-unit"><span id="minutes">00</span><small>M</small></span>
                             </div>
                         </div>
                     </div>
 
-                    <button class="bid-button pulse" onclick="buyTicket()">BUY RAFFLE TICKET ($5) <span
-                            style="font-size: 0.7em; display: block;">+10 ENTRIES</span></button>
+                    <div class="action-zone">
+                        <button class="bid-button pulse" onclick="buyTicket()">
+                            <span class="btn-main">Get Ticket ($5)</span>
+                            <span class="btn-sub">+10 ENTRIES</span>
+                        </button>
+                    </div>
 
-                    <div class="impact-meter">
-                        <div class="meter-bar">
-                            <div class="meter-fill" style="width: 65%;"></div>
+                    <div class="impact-meter-container">
+                        <div class="meter-header">
+                            <span>FUNDRAISING GOAL</span>
+                            <span class="meter-value">$3,250 / $5,000</span>
                         </div>
-                        <p class="impact-text">Goal: $3,250 / $5,000 raised for Hardin Park</p>
+                        <div class="meter-bar-outer">
+                            <div class="meter-bar-inner" style="width: 65%;">
+                                <div class="meter-glare"></div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="viral-share">
                         <h3>SHARE TO EARN +5 ENTRIES</h3>
                         <div class="share-buttons">
-                            <button class="share-btn twitter" onclick="share('twitter')">TWITTER</button>
-                            <button class="share-btn instagram" onclick="share('instagram')">INSTAGRAM</button>
-                            <button class="share-btn tiktok" onclick="share('tiktok')">TIKTOK</button>
+                            <button class="share-btn twitter" onclick="share('twitter')">
+                                <span class="icon">🐦</span> TWITTER
+                            </button>
+                            <button class="share-btn instagram" onclick="share('instagram')">
+                                <span class="icon">📸</span> INSTAGRAM
+                            </button>
+                            <button class="share-btn tiktok" onclick="share('tiktok')">
+                                <span class="icon">🎵</span> TIKTOK
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -128,16 +125,8 @@
 
         <section id="merch" class="merch-section">
             <h2 class="section-title">OFFICIAL MERCH</h2>
-            <div class="merch-container">
-                <div class="merch-card">
-                    <img src="merch.jpg" alt="Wayne Eberle Endless Winter Tee" class="merch-image">
-                    <div class="merch-info">
-                        <h3>Endless Winter Tee</h3>
-                        <p class="price">$35.00</p>
-                        <p class="cause-text">❤️ 100% of proceeds support eliminating school lunch debt.</p>
-                        <button class="buy-button">BUY TEE - SUPPORT KIDS</button>
-                    </div>
-                </div>
+            <div class="merch-grid" id="merch-grid">
+                <!-- Merch items will be loaded via JS -->
             </div>
         </section>
     </main>
@@ -155,6 +144,39 @@
             <p class="copyright">© 2025 Wayne Eberle. All Rights Reserved. Stay Cool.</p>
         </div>
     </footer>
+
+    <!-- Sticky Player -->
+    <div class="sticky-player" id="sticky-player">
+        <div class="player-left">
+            <div class="player-track-info">
+                <div class="player-track-title" id="player-title">Select a track...</div>
+                <button class="player-like-btn" id="player-like-btn" onclick="toggleLikeCurrent()">♡</button>
+            </div>
+        </div>
+
+        <div class="player-center">
+            <div class="player-controls">
+                <button class="control-btn" onclick="prevTrack()">⏮</button>
+                <button class="control-btn play-pause-btn" id="player-play-btn" onclick="togglePlay()">▶</button>
+                <button class="control-btn" onclick="nextTrack()">⏭</button>
+            </div>
+            <div class="progress-container">
+                <span class="time-current" id="current-time">0:00</span>
+                <input type="range" class="progress-bar" id="progress-bar" value="0" min="0" max="100" step="0.1"
+                    oninput="seekAudio()">
+                <span class="time-total" id="total-time">0:00</span>
+            </div>
+        </div>
+
+        <div class="player-right">
+            <button class="control-btn" onclick="shareCurrentTrack()">➦</button>
+            <div class="volume-container">
+                <span class="volume-icon">🔊</span>
+                <input type="range" class="volume-slider" id="volume-slider" min="0" max="1" step="0.1" value="1"
+                    oninput="setVolume()">
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
