@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wayne Eberle | Pop Icon</title>
+    <meta name="description"
+        content="Official website of 90s Pop Icon Wayne Eberle. Listen to hits, buy merch, and support school lunches.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@400;700;900&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="geometric-bg"></div>
+
+    <header class="hero">
+        <nav class="main-nav">
+            <div class="logo">WAYNE</div>
+            <ul class="nav-links">
+                <li><a href="#music">Music</a></li>
+                <li><a href="#merch">Merch</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="glitch" data-text="WAYNE EBERLE">WAYNE EBERLE</h1>
+                <h2 class="subtitle">POP ICON</h2>
+                <a href="#music" class="cta-button">LISTEN NOW</a>
+            </div>
+            <div class="hero-image-container">
+                <img src="hero.jpg" alt="Wayne Eberle 90s Pop Star" class="hero-image">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="music" class="music-section">
+            <h2 class="section-title">TOP TRACKS <span class="accent-star">★</span></h2>
+
+            <div class="cassette-player">
+                <div class="cassette-window">
+                    <div class="tape-reel left"></div>
+                    <div class="tape-reel right"></div>
+                </div>
+                <div class="track-display" id="current-track">Select a track...</div>
+
+                <div class="playlist">
+                    <div class="track-item" data-src=""
+                        onclick="alert('Demo implementation: Audio file would play here')">
+                        <span class="track-number">01</span>
+                        <span class="track-name">Forever in Denim</span>
+                        <button class="play-btn">▶</button>
+                    </div>
+                    <div class="track-item" data-src=""
+                        onclick="alert('Demo implementation: Audio file would play here')">
+                        <span class="track-number">02</span>
+                        <span class="track-name">Neon Heartbreak</span>
+                        <button class="play-btn">▶</button>
+                    </div>
+                    <div class="track-item" data-src=""
+                        onclick="alert('Demo implementation: Audio file would play here')">
+                        <span class="track-number">03</span>
+                        <span class="track-name">Mall Food Court Date</span>
+                        <button class="play-btn">▶</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="raffle" class="auction-section">
+            <div class="auction-container">
+                <div class="auction-media">
+                    <div class="badge-container">
+                        <span class="badge exclusive">1 of 1</span>
+                        <span class="badge premium">HAND CRAFTED</span>
+                    </div>
+                    <img src="jacket.jpg" alt="Custom Wayne Eberle Jean Jacket" class="auction-image">
+                </div>
+                <div class="auction-details">
+                    <h2 class="auction-title">THE SNOW JAMS RAFFLE</h2>
+                    <p class="auction-description">Win the 1-of-1 "Endless Winter" Jacket. Sponsored by the
+                        <strong>Hardin Park PTA</strong>. All proceeds go directly to paying down school lunch debt.</p>
+
+                    <div class="bid-panel">
+                        <div class="current-bid">
+                            <span class="bid-label">YOUR ENTRIES</span>
+                            <span class="bid-amount glitch" id="user-points" data-text="0">0</span>
+                        </div>
+                        <div class="countdown-timer">
+                            <span class="timer-label">WINNER DRAWN IN</span>
+                            <div id="timer" class="timer-display">
+                                <span class="time-unit"><span id="days">00</span>d</span> :
+                                <span class="time-unit"><span id="hours">00</span>h</span> :
+                                <span class="time-unit"><span id="minutes">00</span>m</span> :
+                                <span class="time-unit"><span id="seconds">00</span>s</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="bid-button pulse" onclick="buyTicket()">BUY RAFFLE TICKET ($5) <span
+                            style="font-size: 0.7em; display: block;">+10 ENTRIES</span></button>
+
+                    <div class="impact-meter">
+                        <div class="meter-bar">
+                            <div class="meter-fill" style="width: 65%;"></div>
+                        </div>
+                        <p class="impact-text">Goal: $3,250 / $5,000 raised for Hardin Park</p>
+                    </div>
+
+                    <div class="viral-share">
+                        <h3>SHARE TO EARN +5 ENTRIES</h3>
+                        <div class="share-buttons">
+                            <button class="share-btn twitter" onclick="share('twitter')">TWITTER</button>
+                            <button class="share-btn instagram" onclick="share('instagram')">INSTAGRAM</button>
+                            <button class="share-btn tiktok" onclick="share('tiktok')">TIKTOK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="merch" class="merch-section">
+            <h2 class="section-title">OFFICIAL MERCH</h2>
+            <div class="merch-container">
+                <div class="merch-card">
+                    <img src="merch.jpg" alt="Wayne Eberle Endless Winter Tee" class="merch-image">
+                    <div class="merch-info">
+                        <h3>Endless Winter Tee</h3>
+                        <p class="price">$35.00</p>
+                        <p class="cause-text">❤️ 100% of proceeds support eliminating school lunch debt.</p>
+                        <button class="buy-button">BUY TEE - SUPPORT KIDS</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-icon">INSTAGRAM</a>
+                <a href="#" class="social-icon">TWITTER</a>
+                <a href="#" class="social-icon">TIKTOK</a>
+            </div>
+            <div class="charity-note">
+                <p>Wayne Eberle is proud to partner with local PTAs to ensure no child goes hungry.</p>
+            </div>
+            <p class="copyright">© 2025 Wayne Eberle. All Rights Reserved. Stay Cool.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
