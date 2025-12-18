@@ -527,6 +527,62 @@ This is Wayne Everly, bringing you the news
 Thank you, be safe, bundle up and everyone say
 This is Wayne Everly—it's a snow day!
 This is Wayne Everly—it's a snow day!`
+    },
+    {
+        title: "Slow jams with W-A-Y-N-E",
+        src: "https://cdn1.suno.ai/439fa90e-85b7-4553-bbff-8b1f8bf46e4b.mp3",
+        sunoUrl: "https://suno.com/s/K6uDNEA7c0m92a4B",
+        lyrics: `You thought Sunday was safe.
+Check your phone.
+W-A-Y-N-E.
+
+[ CHORUS]
+Two-hour delaaaay
+Mama's not okaaaay
+Daddy's in the car just sitting in the drivewaaaaay
+
+[VERSE 1]
+Good evening parents, guardians too
+Sunday the fourteenth, I'm back for you
+Saturday I was silent—felt weird, right?
+Twenty-four hours, no Wayne? Didn't feel right
+You were almost relaxed, almost felt like yourself
+Phone lit up. Wayne Eberly. Back from the shelf.
+Am I a machine? Am I a bot?
+Do I sleep? Do I eat? Probably not.
+I exist when it's cold. I vanish in May.
+Nobody asks questions. Nobody's okay.
+Nobody asks questions. Nobody's okay.
+
+[CHORUS]
+Two-hour delaaaay
+Screen time all daaaay
+Mom said a word we can't saaaay
+Everything is fine, they saaaay 🎵
+
+[VERSE 2]
+Icy cold, freezing across the county
+Might even snow—who knows? Not me.
+You had plans tomorrow. Meetings. A life.
+Wayne don't care about your deadlines, right?
+I'll be back tomorrow morning
+Six AM? Seven? Can't say.
+Full cancel? Delay? All clear?
+Keep guessing. I'll keep you he, flat)
+Guessing people don't get work done.
+
+[CHORUS]
+Two-hour delaaaay
+I haven't moved all daaaay
+I'm starting to fraaaay
+Parent's are not okaaaay
+
+[OUTRO]
+(spoken)
+See you tomorrow. Early.
+Maybe I'll let you sleep.
+(pause)
+No I won't.`
     }
 ];
 
